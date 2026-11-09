@@ -122,6 +122,36 @@ Kemudian:
 flutter run
 ```
 
+### 6. Jalankan Backend REST API
+
+Backend Dart Shelf berada pada folder `server/`. Buka terminal di root repository,
+lalu jalankan:
+
+```bash
+cd server
+dart pub get
+dart run bin/server.dart
+```
+
+Server berjalan di `http://localhost:8080` secara default. Port dapat diubah
+dengan mengatur environment variable `PORT`. Data buku dimuat dari
+`server/data/buku.json`.
+
+Endpoint yang tersedia:
+
+| Method | Path | Hasil |
+|---|---|---|
+| GET | `/buku` | Daftar seluruh buku |
+| GET | `/buku/:id` | Detail satu buku berdasarkan ID |
+| GET | `/kategori` | Daftar kategori unik |
+
+Uji endpoint dengan membuka URL di browser atau menjalankan pengujian:
+
+```bash
+cd server
+dart test
+```
+
 ## 🧪 Pemeriksaan Kode
 
 Untuk memeriksa apakah terdapat masalah pada kode, jalankan:

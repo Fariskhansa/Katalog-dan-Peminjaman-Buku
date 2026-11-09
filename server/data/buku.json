@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "judul": "Laskar Pelangi",
+    "penulis": "Andrea Hirata",
+    "kategori": "Novel",
+    "tahun_terbit": 2005,
+    "penerbit": "Bentang Pustaka",
+    "deskripsi": "Kisah perjuangan sepuluh anak di Belitung untuk memperoleh pendidikan."
+  },
+  {
+    "id": 2,
+    "judul": "Bumi",
+    "penulis": "Tere Liye",
+    "kategori": "Fantasi",
+    "tahun_terbit": 2014,
+    "penerbit": "Gramedia Pustaka Utama",
+    "deskripsi": "Petualangan Raib, Seli, dan Ali menjelajahi dunia paralel."
+  },
+  {
+    "id": 3,
+    "judul": "Negeri 5 Menara",
+    "penulis": "Ahmad Fuadi",
+    "kategori": "Novel",
+    "tahun_terbit": 2009,
+    "penerbit": "Gramedia Pustaka Utama",
+    "deskripsi": "Persahabatan dan cita-cita enam santri di sebuah pesantren."
+  },
+  {
+    "id": 4,
+    "judul": "Filosofi Teras",
+    "penulis": "Henry Manampiring",
+    "kategori": "Pengembangan Diri",
+    "tahun_terbit": 2018,
+    "penerbit": "Penerbit Buku Kompas",
+    "deskripsi": "Pengantar praktis filsafat Stoisisme untuk kehidupan sehari-hari."
+  },
+  {
+    "id": 5,
+    "judul": "Laut Bercerita",
+    "penulis": "Leila S. Chudori",
+    "kategori": "Novel",
+    "tahun_terbit": 2017,
+    "penerbit": "Kepustakaan Populer Gramedia",
+    "deskripsi": "Novel tentang persahabatan, keluarga, dan perjuangan pada masa Orde Baru."
+  },
+  {
+    "id": 6,
+    "judul": "Atomic Habits",
+    "penulis": "James Clear",
+    "kategori": "Pengembangan Diri",
+    "tahun_terbit": 2018,
+    "penerbit": "Avery",
+    "deskripsi": "Panduan membangun kebiasaan baik melalui perubahan kecil yang konsisten."
+  },
+  {
+    "id": 7,
+    "judul": "The Hobbit",
+    "penulis": "J. R. R. Tolkien",
+    "kategori": "Fantasi",
+    "tahun_terbit": 1937,
+    "penerbit": "George Allen & Unwin",
+    "deskripsi": "Petualangan Bilbo Baggins dalam perjalanan menuju Gunung Sunyi."
+  },
+  {
+    "id": 8,
+    "judul": "Bumi Manusia",
+    "penulis": "Pramoedya Ananta Toer",
+    "kategori": "Sejarah",
+    "tahun_terbit": 1980,
+    "penerbit": "Hasta Mitra",
+    "deskripsi": "Kisah Minke dan pergulatan masyarakat pada masa kolonial."
+  },
+  {
+    "id": 9,
+    "judul": "Sapiens",
+    "penulis": "Yuval Noah Harari",
+    "kategori": "Sejarah",
+    "tahun_terbit": 2011,
+    "penerbit": "Harper",
+    "deskripsi": "Tinjauan sejarah perkembangan manusia dari masa purba hingga modern."
+  },
+  {
+    "id": 10,
+    "judul": "Perahu Kertas",
+    "penulis": "Dee Lestari",
+    "kategori": "Romansa",
+    "tahun_terbit": 2009,
+    "penerbit": "Bentang Pustaka",
+    "deskripsi": "Kisah Kugy dan Keenan dalam mengejar mimpi dan menemukan cinta."
+  },
+  {
+    "id": 11,
+    "judul": "Dilan: Dia adalah Dilanku Tahun 1990",
+    "penulis": "Pidi Baiq",
+    "kategori": "Romansa",
+    "tahun_terbit": 2014,
+    "penerbit": "Pastel Books",
+    "deskripsi": "Kisah Milea mengenang pertemuannya dengan Dilan di Bandung."
+  },
+  {
+    "id": 12,
+    "judul": "Educated",
+    "penulis": "Tara Westover",
+    "kategori": "Memoar",
+    "tahun_terbit": 2018,
+    "penerbit": "Random House",
+    "deskripsi": "Memoar perjalanan seorang perempuan dari keluarga terpencil menuju pendidikan tinggi."
+  }
+]
