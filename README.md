@@ -12,7 +12,7 @@ Aplikasi katalog dan peminjaman buku perpustakaan prodi berbasis Flutter, dileng
 | Novi | _isi NIM_ | Model `Buku`, halaman Katalog, kartu buku, pencarian |
 | Andra | _isi NIM_ | Server Dart shelf dan REST API |
 | Alpi | _isi NIM_ | Halaman Detail Buku dan Peminjaman |
-| Dio | _isi NIM_ | Form usulan pengadaan buku, `ApiService`, pengujian, dokumentasi |
+| Dio | 102022340241 | Form usulan pengadaan buku, `ApiService`, pengujian, dokumentasi |
 
 ## 🚀 Cara Menjalankan
 
