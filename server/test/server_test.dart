@@ -19,8 +19,18 @@ void main() {
 
     expect(response.statusCode, HttpStatus.ok);
     expect(response.headers['content-type'], contains('application/json'));
+    expect(response.headers['access-control-allow-origin'], '*');
     expect(body, hasLength(greaterThanOrEqualTo(12)));
     expect(body.first, containsPair('id', 1));
+  });
+
+  test('OPTIONS merespons preflight CORS', () async {
+    final response = await handler(
+      Request('OPTIONS', Uri.parse('http://localhost/buku')),
+    );
+
+    expect(response.statusCode, HttpStatus.noContent);
+    expect(response.headers['access-control-allow-methods'], 'GET, OPTIONS');
   });
 
   test('GET /buku/:id mengembalikan buku dengan ID yang sesuai', () async {

@@ -59,8 +59,25 @@ Handler createHandler(List<Map<String, dynamic>> books) {
     return _jsonResponse(categories);
   });
 
-  return Pipeline().addHandler(router.call);
+  return Pipeline().addMiddleware(_corsMiddleware).addHandler(router.call);
 }
+
+Middleware get _corsMiddleware => (Handler innerHandler) {
+      return (Request request) async {
+        if (request.method == 'OPTIONS') {
+          return Response(HttpStatus.noContent, headers: _corsHeaders);
+        }
+
+        final response = await innerHandler(request);
+        return response.change(headers: _corsHeaders);
+      };
+    };
+
+const _corsHeaders = {
+  'access-control-allow-origin': '*',
+  'access-control-allow-methods': 'GET, OPTIONS',
+  'access-control-allow-headers': 'Origin, Content-Type, Accept',
+};
 
 Response _jsonResponse(Object body, {int statusCode = HttpStatus.ok}) {
   return Response(

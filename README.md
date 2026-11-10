@@ -104,6 +104,19 @@ Pastikan kebutuhan pengembangan Flutter dan Android sudah terpenuhi.
 
 ### 5. Jalankan Aplikasi
 
+Jalankan backend REST API lebih dahulu agar katalog dapat mengambil daftar buku.
+Secara default aplikasi menggunakan `http://127.0.0.1:8080` di desktop dan
+`http://10.0.2.2:8080` pada Android Emulator. Backend Shelf mengizinkan CORS
+untuk endpoint baca yang digunakan Flutter Web. Untuk perangkat fisik, arahkan
+aplikasi ke alamat IP komputer yang menjalankan backend:
+
+```bash
+flutter run --dart-define=API_BASE_URL=http://192.168.1.10:8080
+```
+
+Ganti alamat tersebut sesuai IP komputer dan pastikan perangkat berada di
+jaringan yang sama.
+
 Untuk menjalankan aplikasi melalui Chrome:
 
 ```bash
@@ -144,6 +157,10 @@ Endpoint yang tersedia:
 | GET | `/buku` | Daftar seluruh buku |
 | GET | `/buku/:id` | Detail satu buku berdasarkan ID |
 | GET | `/kategori` | Daftar kategori unik |
+
+Katalog Flutter mengambil data dari `GET /buku`. Pada data contoh backend,
+`tersedia` belum dikirim sehingga model menganggap buku tersedia; `tanggalMasuk`
+dan `sampul` tetap kosong sampai backend menyediakan nilainya.
 
 Uji endpoint dengan membuka URL di browser atau menjalankan pengujian:
 
