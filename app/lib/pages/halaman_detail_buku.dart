@@ -37,7 +37,7 @@ class HalamanDetailBuku extends StatelessWidget {
                         ? Image.network(
                             buku.sampul!,
                             fit: BoxFit.contain,
-                            errorBuilder: (_, __, ___) {
+                            errorBuilder: (_, _, _) {
                               return const Icon(Icons.menu_book, size: 120);
                             },
                           )

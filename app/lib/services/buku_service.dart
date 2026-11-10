@@ -1,52 +1,19 @@
-import 'dart:convert';
-
-import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
 
 import '../models/buku.dart';
+import 'api_service.dart';
 
+/// Service katalog yang dipakai HalamanKatalog.
+///
+/// Request HTTP-nya sekarang didelegasikan ke [ApiService],
+/// jadi seluruh koneksi ke backend terpusat di satu API client.
 class BukuService {
-  const BukuService({this.baseUrl});
+  const BukuService({this.baseUrl, this.client});
 
   final String? baseUrl;
+  final http.Client? client;
 
-  String get _baseUrl => baseUrl ?? _defaultBaseUrl;
+  ApiService get _api => ApiService(baseUrl: baseUrl, client: client);
 
-  static String get _defaultBaseUrl {
-    const configuredUrl = String.fromEnvironment('API_BASE_URL');
-    if (configuredUrl.isNotEmpty) {
-      return configuredUrl;
-    }
-    if (!kIsWeb && defaultTargetPlatform == TargetPlatform.android) {
-      return 'http://10.0.2.2:8080';
-    }
-    return 'http://127.0.0.1:8080';
-  }
-
-  Future<List<Buku>> fetchBooks() async {
-    final baseUrl = _baseUrl.replaceFirst(RegExp(r'/$'), '');
-    final response = await http
-        .get(Uri.parse('$baseUrl/buku'))
-        .timeout(const Duration(seconds: 15));
-
-    if (response.statusCode != 200) {
-      throw Exception('Gagal memuat katalog (HTTP ${response.statusCode}).');
-    }
-
-    final decoded = jsonDecode(response.body);
-    if (decoded is! List) {
-      throw const FormatException('Respons endpoint /buku harus berupa array.');
-    }
-
-    return decoded
-        .map((item) {
-          if (item is! Map<String, dynamic>) {
-            throw const FormatException(
-              'Setiap item pada respons /buku harus berupa objek.',
-            );
-          }
-          return Buku.fromJson(item);
-        })
-        .toList(growable: false);
-  }
+  Future<List<Buku>> fetchBooks() => _api.getDaftarBuku();
 }

@@ -53,7 +53,7 @@ class KartuBuku extends StatelessWidget {
                           Image.network(
                             buku.sampul!,
                             fit: BoxFit.cover,
-                            errorBuilder: (_, __, ___) =>
+                            errorBuilder: (_, _, _) =>
                                 _placeholderCover(colors),
                           )
                         else
